@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Design Portfolio</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet"> <!-- Inter font with bold weight -->
+ <style>
+ body {
+ font-family: Arial, sans-serif;
+ scroll-behavior: smooth;
+ background-color: white; /* Set background color of the whole page to white */
+ }
+ .header {
+ background-color: #ff4444;
+ color: white;
+ padding: 10px 20px;
+ position: fixed;
+ top: 0;
+ width: 100%;
+ z-index: 1000;
+ } .header a {
+ color: white;
+ text-decoration: none;
+ margin: 0 15px;
+ font-size: 14px;
+ font-weight: bold;
+ }
+ .header a:hover {
+ text-decoration: underline;
+ }
+ section {
+ padding-top: 80px;
+ }
+ .title {
+font-family: 'Inter', sans-serif; /* Using Inter font */
+font-size: 7rem;
+font-weight: 700; /* Bold weight */
+ line-height: 1;
+ }
+ /* Home Section */
+ #home {
+      height: 100vh;
+      color: white;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+
+    .video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .home-content {
+      position: absolute;
+      left: 50px;
+      top: 50px;
+      text-align: left;
+    }
+
+    .home-content .name {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .home-content .subtitle {
+      font-family: Arial, sans-serif;
+      font-size: 1.1rem;
+      font-weight: normal;
+      margin-top: 5px;
+    }
+
+    .home-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 8rem;
+      font-weight: 900;
+      line-height: 1;
+      text-align: left;
+      margin: 0;
+      position: absolute;
+      bottom: 10%;
+      left: 50px;
+    }
+
+
+ .subtitle {
+ font-family: 'Great Vibes', cursive;
+ font-size: 2rem;
+ }
+ .small-placeholder, .about-image, .work-item {
+ background-color: #ddd;
+ position: relative;
+ }
+ .small-placeholder {
+ height: 150px;
+ width: 60%;
+ margin: 20px 0;
+ float: left; /* This will left-align the element */
+ }
+ .about-image, .work-item {
+ height: 400px;
+ width: 100%;
+ }
+ .about-image img, .work-item img {
+ object-fit: cover;
+ width: 100%;
+ height: 100%;
+ border-radius: 10px;
+ }
+ .about-text {
+ font-size: 1rem;
+ margin-top: 20px;
+ text-align: center;
+ }
+ .work-item {
+ margin-bottom: 30px;  /* Adds gap between the items */
+ transition: transform 0.3s ease-in-out;
+ border-radius: 10px; /* Soft rounded corners */
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+ position: relative;
+ cursor: pointer;
+ }
+ .work-item:hover {
+ transform: scale(1.05);
+ box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+ }
+ .work-title {
+ text-align: center;
+ font-size: 1rem;
+ margin-top: 10px;
+ font-weight: bold;  /* Bold the titles */
+ text-transform: uppercase; /* Make text uppercase */
+ }
+ .first-slide {
+ padding: 50px 0;
+ }
+ .about-slide {
+ padding: 50px 0;
+ }
+ .work-slide {
+ padding: 50px 0;
+ }
+ .section-divider {
+ height: 5px; /* More subtle divider */
+ background-color: #ff4444;
+ margin-top: 30px;
+ }
+ .row {
+ margin-left: 0;
+ margin-right: 0;
+ }
+ .col-md-4 {
+ padding-left: 15px; /* Adds space between columns */
+ padding-right: 15px; /* Adds space between columns */
+ }
+ .description {
+ display: none;
+ position: absolute;
+ bottom: 10px;
+ left: 10px;
+ background-color: rgba(0, 0, 0, 0.7);
+ color: white;
+ padding: 15px;
+ border-radius: 8px;
+ width: 90%;
+ font-size: 0.9rem;
+ }
+ .work-item.active .description {
+ display: block;
+ }
+ 
+ </style>
+</head>
+<body>
+
+ <!-- Navigation Bar -->
+ <nav class="header">
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#work">WORK</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+
+
+ <!-- Home Section -->
+ <section id="home">
+    <video class="video-bg" autoplay muted loop>
+      <source src="background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="home-content">
+      <p class="name">Devanshi Doshi</p>
+      <p class="subtitle">a visual communication design student <br> specializing in UI/UX, branding, and <br> graphic design.</p>
+    </div>
+    <h1 class="home-title">DESIGN <br> PORTFOLIO</h1>
+  </section>
+
+ 
+
+ <!-- About Section -->
+<section id="about" class="about-slide container">
+ <div class="text-center">
+ <p class="subtitle">Graphic Designer</p>
+ <h1 class="title">DEVANSHI</h1>
+ <div class="about-image">
+ <img src="about me.jpg" alt="About Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+ </div>
+ <p class="about-text">
+ Hey there! I am Devanshi Doshi, a First-Year College student at Atlas Skilltech University. I have a strong interest in marketing, branding, UI/UX, and creating advertisements, particularly through digital mediums and hands-on projects. I possess a knack for design and aspire to become proficient in using different design software. I am dedicated to learning and improving my skills to produce visually appealing and effective marketing materials.
+ </p>
+ </div>
+ </section>
+ 
+
+ <!-- Divider -->
+ <div class="section-divider"></div>
+
+ <!-- Work Section (First Page) -->
+ <section id="work" class="work-slide container">
+ <div class="row">
+ <div class="col-md-4 text-center">
+ <div class="work-item" onclick="toggleDescription(this)">
+ <img src="sony branding.png" alt="Sony Branding"> <!-- Add your image source here -->
+ <div class="description">
+ Sony's Silence the Noise, Find Your Zen campaign highlights the transformative power of music in promoting mental wellness. With advanced noise-canceling headphones, Sony offers a sanctuary from the chaos of everyday life, encouraging mindfulness, relaxation, and emotional restoration. The campaign emphasizes how music can help individuals reduce stress, reconnect with themselves, and prioritize their well-being—showing that inner peace is just a song away.
+ </div>
+ </div>
+ <p class="work-title">Sony Branding</p>
+ </div>
+ <div class="col-md-4 text-center">
+ <div class="work-item" onclick="toggleDescription(this)">
+ <img src="glossary jpg.png" alt="Glossary"> <!-- Add your image source here -->
+ <div class="description">
+ We designed A glossary that celebrates Yayoi Kusama’s artistic journey and creative themes. The glossary follows an A-to-Z format, with each entry representing significant aspects of her work, life, and influence.
+ From her iconic use of dots and infinity motifs to her exploration of mental health and individuality, the glossary captures the essence of Kusama’s world. It serves as a creative exploration and tribute to one of contemporary art’s most distinctive voices.
+ </div>
+ </div>
+ <p class="work-title">Glossary</p>
+ </div>
+ <div class="col-md-4 text-center">
+ <div class="work-item" onclick="toggleDescription(this)">
+ <img src="blender 3d.png" alt="Blender 3D"> <!-- Add your image source here -->
+ <div class="description">
+ I created abstract shapes using Blender 3D software for the first time. This experience allowed me to explore the software's tools and techniques, experimenting with forms, textures, and lighting to bring my creative vision to life. It was an exciting journey of discovery and learning, showcasing the endless possibilities of 3D design.
+ </div>
+ </div>
+ <p class="work-title">Blender 3D</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- Divider -->
+<div class="section-divider"></div>
+
+ <!-- Work Section (Second Page) -->
+ <section id="work-cont" class="work-slide container">
+ <div class="row">
+ <div class="col-md-4 text-center">
+ <div class="work-item" onclick="toggleDescription(this)">
+ <img src="digital painting.png" alt="Typeface Design"> <!-- Add your image source here -->
+ <div class="description">
+ Software used: Procreate
+ </div>
+ </div>
+ <p class="work-title">DIGITAL PAINTING</p>
+ </div>
+ <div class="col-md-4 text-center">
+ <div class="work-item" onclick="toggleDescription(this)">
+ <img src="packaging.png" alt="Soap Packaging"> <!-- Add your image source here -->
+ <div class="description">
+ This project explores the integration of typography and visual design in soap packaging. Using a modified typeface inspired by sea foam, the design emphasizes typography, with 70% of the layout featuring the custom typeface for a strong brand identity. Complementary sea-inspired colors, patterns, and textures enhance the theme, while a subordinate font ensures readability for product details. This project showcases the synergy between type, visuals, and functionality in impactful packaging.
+ </div>
+ </div>
+ <p class="work-title">PACKAGING DESIGN</p>
+ </div>
+ <div class="col-md-4 text-center">
+ <div class="work-item" onclick="toggleDescription(this)">
+<img src="Helvetica2-01.jpg" alt="typography"> <!-- Add your image source here -->
+ <div class="description">
+ This typographic poster is a celebration of Helvetica, a font known for its clarity, neutrality, and versatility. Drawing inspiration from the dynamic and playful art style of Jessica Walsh, particularly her vibrant Azione Campaign, this poster aims to blend classic typography with a bold, modern aesthetic. 
+
+ The design explores the intersection of typography and color, creating an eye-catching piece that commands attention through its energetic and unconventional use of type and layout.
+ </div>
+ </div>
+ <p class="work-title">TYPOGRAPHY</p>
+</div>
+ </div>
+ </section>
+
+ <script>
+ function toggleDescription(element) {
+ element.classList.toggle('active');
+ }
+ </script>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Divider -->
+<div class="section-divider"></div>
+
+
+<!-- Contact Section -->
+<section id="contact" class="container text-center">
+ <div class="py-5">
+ <h1 class="title">LET'S <br>COLLABORATE</h1>
+ <p class="mt-3">Phone number: +91 7003188058</p>
+ <p>Address: Omkar Vive, Mumbai-400070</p>
+ <p class="subtitle mt-4">
+ <a href="mailto:devanshidoshi@gmail.com" style="text-decoration: none; color: black;">devanshidoshi@gmail.com</a>
+ </p>
+ <div class="mt-4 d-flex justify-content-center gap-4">
+ <a href="https://instagram.com" target="_blank" style="font-family: 'Great Vibes', cursive; font-size: 1.5rem; color: black;">Instagram</a>
+ <a href="https://linkedin.com" target="_blank" style="font-family: 'Great Vibes', cursive; font-size: 1.5rem; color: black;">LinkedIn</a>
+ </div>
+ </div>
+ <div class="mt-5">
+ </div>
+</section>
+
+
+
+
+</body>
+</html>
+
